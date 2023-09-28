@@ -38,10 +38,13 @@ const people = [
 
 const youngPeople = people.map((person) => {
   return {
-    firstName: person.firstName,
-    lastName: person.lastName,
+    fullName: person.firstName + ' ' + person.lastName,
     email: person.email,
-    age: person.start <= person.end,
   };
 });
 console.log(youngPeople);
+
+// const earlyCompanies = companies.filter(
+//     (company) => company.start >= 1980 && company.end <= 2005
+//   );
+//   console.log(earlyCompanies);
