@@ -35,7 +35,7 @@ const people = [
     age: 23,
   },
 ];
-
+//Solution1
 const youngPeople = people.map((person) => {
   return {
     fullName: person.firstName + ' ' + person.lastName,
@@ -44,7 +44,9 @@ const youngPeople = people.map((person) => {
 });
 console.log(youngPeople);
 
-// const earlyCompanies = companies.filter(
-//     (company) => company.start >= 1980 && company.end <= 2005
-//   );
-//   console.log(earlyCompanies);
+//Solution2
+const numbers = [2, -30, 50, 20, -12, -9, 7];
+const positive = numbers.filter((acc) => acc > 0);
+console.log(positive);
+const positiveSum = positive.reduce((acc, cur) => acc + cur);
+console.log(positiveSum);
