@@ -35,7 +35,7 @@ const people = [
     age: 23,
   },
 ];
-//Solution1
+//Solution Challenge1
 const youngPeople = people.map((person) => {
   return {
     fullName: person.firstName + ' ' + person.lastName,
@@ -44,9 +44,23 @@ const youngPeople = people.map((person) => {
 });
 console.log(youngPeople);
 
-//Solution2
+//Solution Challenge2
+//Chain other method
+//filtered all positive then add it
 const numbers = [2, -30, 50, 20, -12, -9, 7];
-const positive = numbers.filter((acc) => acc > 0);
-console.log(positive);
-const positiveSum = positive.reduce((acc, cur) => acc + cur);
+const positiveSum = numbers
+  .filter((acc) => acc > 0)
+  .reduce((acc, cur) => acc + cur);
 console.log(positiveSum);
+
+// Solution Challenge3
+//Create a new array called capitalizedWords
+
+const words = ['coder', 'programmer', 'developer'];
+const capitalizedWords = words.map((word) => {
+  const firstLetter = word.charAt(0).toUpperCase();
+  const rest = word.slice(1).toLowerCase();
+
+  return firstLetter + rest;
+});
+console.log(capitalizedWords);
